@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated_GradientBorder</title>
+
+    <style>
+
+/* @import 'var'{
+$width: 250px;
+$height: 350px;
+$borderSize: 5px;
+$border-radius: 20px;
+} */
+
+.boxMajor{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: -5;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    z-index: 2;
+    /* border: 5px; */
+    border-radius: 20px;
+    /* background-color: #fe019a;
+    padding: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card::before{
+    content: "";
+    width: 260px;
+    height: 360px;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(45deg, #fe019a, #00dcff);
+    top: -5px;
+    left: -5px;
+    border-radius: 20px;
+    background-size: 100% 300%;
+    background-position: 0% 100%;
+    animation: move 1500ms infinite alternate linear;
+}
+
+.card::after{
+    content: "";
+    width: 260px;
+    height: 360px;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(45deg, #fe019a, #00dcff);
+    top: -5px;
+    left: -5px;
+    border-radius: 20px;
+    filter: blur(260px);
+
+    background-size: 100%, 300%;
+    background-position: 0%, 100%;
+    animation: move 1500ms infinite alternate linear;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 15px;               
+}   
+
+@keyframes move {
+    from{ 
+        background-position: top center;
+    }   
+
+    to {
+        
+        background-position: bottom center;
+    }
+
+}
+    /* der border-radius des content-Div-Containers ergibt sich aus border-radius des äußeren div-Containers Minus der border-Dicke. Somit erhalten die Ecken einen symmetrische border-radius */
+    </style>
+</head>
+<body>
+
+<div class="boxMajor">
+    <div class="card">
+        <div class="content"></div>
+    </div>
+</div>
+
+</body>
+</html>
+  

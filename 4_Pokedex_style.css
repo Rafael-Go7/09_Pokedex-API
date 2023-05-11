@@ -1,0 +1,856 @@
+body{
+    margin: 0;
+    font-family: 'Electrolize', sans-serif;
+}
+
+body h1{
+    font-family: 'Michroma', sans-serif;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding: 0 25px 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    background-color: #f5f5dc;
+}
+
+/* .header img {
+    height: 200px;
+    padding-right: 20px;
+} */
+
+/* .header_Logo {
+    display: flex;
+    align-items: center;
+} */
+
+.header_Logo h1 {
+    font-size: 48px;
+}
+
+.header input {
+    height: 30px;
+    width: 200px;
+    font-size: large;
+}
+
+.hide{
+    display: none !important;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    background-color: #d1bc8a;
+    /* background-color: #FBD603; */
+    background-repeat: repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    height: auto;
+    width: auto;
+    border-radius: 10px 50px;
+    margin: 8px;
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 2px 2px 10px 3px rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 15px 5px #000000;
+    text-shadow: 0 0 10px #FFFFFF;
+    color: white;
+}
+
+
+.pokecard_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.pokecard_head_left {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokecard_head_left_sub {
+    display: flex;
+    align-items: center;
+}
+
+.pokecard_head_left h2 {
+    margin: 0;
+}
+.pokecard_head_left h2:first-letter {
+    text-transform: uppercase;
+}
+
+.pokecard_head_left_sub img {
+    width: 40px;
+    height: 30px;
+}
+.pokecard_class {
+    display: flex;
+}
+
+.pokecard_class span {
+    padding-right: 10px;
+    text-transform: capitalize;
+}
+
+.pokecard_body {
+    FONT-WEIGHT: 100;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+    background-image:url("img/Star\ Sky_612x612.jpg");
+    max-width: 250px;
+    max-height: 220px;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;;
+}
+
+.pokecard_body img {
+    object-fit: contain;
+    max-width: 250px;
+    max-height: 220px;
+    transition: transform .2s;
+}
+
+.pokecard_body img:hover {
+    transform: scale(1.5);
+}
+
+.pokecard img {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+
+    /* ---- PopUp-Container Elements (normal)---- */
+
+.popUp-container{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-card{
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 3px rgb(0 0 0 / 20%);
+    height: 690px;
+    width: 450px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-card_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-bottom: 1%;
+    /* padding: 10px; */
+    text-shadow: 0 0 10px #FFFFFF;
+    color: white;
+}
+
+.detail-card_head h2{
+    margin: 0;
+    font-weight: bold;
+}
+
+.detail-card_head h2:first-letter {
+    text-transform: uppercase;
+}
+
+.detail-card_head button {
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    border-style: solid;
+}
+
+.top-container{
+    height: 46%;
+    width: 98%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    z-index: 1;
+}   
+
+
+/* ---- top-containerAnimation ---- */
+
+
+.top-containerLinearGradientCard {
+    width: 96%;
+    height: 94%;
+    position: relative;
+    z-index: 2;
+    border: 5px;
+    border-radius: 20px;
+    /* background-color: #fe019a; */
+    /* padding: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.top-containerLinearGradientCard::before{
+    content: "";
+    width: 98%;
+    height: 94%;
+    position: absolute;
+    z-index: 2;
+    background-image: linear-gradient(0, #fe019a, #00dcff);
+    /* top: -5px;
+    left: -5px; */
+    border-radius: 20px;
+    background-size: 100% 300%;
+    background-position: 0% 100%;
+    animation: move 1500ms infinite alternate linear;
+}
+
+.top-containerLinearGradientCard::after{
+    content: "";
+    width: 98%;
+    height: 94%;
+    position: absolute;
+    z-index: 1;
+    background-image: linear-gradient(0, #fe019a, #00dcff);
+    /* top: -5px;
+    left: -5px; */
+    border-radius: 20px;
+    filter: blur(96%);
+
+    background-size: 100%, 300%;
+    background-position: 0%, 100%;
+    animation: move 1500ms infinite alternate linear;
+}
+
+.top-containerContent{
+    width: 94%;
+    height: 88%;
+    background-color: black;
+    background-image: url("img/Star\ Sky_612x612.jpg");
+    border-radius: 15px;
+    z-index: 2;  
+    display: flex;
+    justify-content:center;
+    align-items: center;             
+}   
+
+@keyframes move {
+    from{ 
+        background-position: top center;
+    }   
+
+    to {
+        
+        background-position: bottom center;
+    }
+
+}
+
+/* ---- top-containerAnimation End ---- */
+.top-containerInside{
+    height: 100%;
+    z-index: 4;
+    /* display: flex;
+    align-items: baseline; */
+}
+
+.top-containerInside button {
+    height: 65px;
+    width: 65px;
+    border: 0;
+    z-index: 3;
+}
+
+.top-containerInside button:hover {
+    cursor: pointer;
+}
+
+.btn_arrowLeft {
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    background:none;
+}
+
+.btn_arrowRight {
+    position: absolute;
+    bottom: 10%;
+    right: 2%;
+    background:none;
+}
+
+.top-containerInside img{
+    object-fit: contain;
+    transition: transform .2s;
+    max-height: 75%;
+    padding-top: 5%;
+}
+
+.top-containerInside img:hover {
+    transform: scale(1.5);
+}
+
+.bottom-container{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    background-color: white;
+    margin-top: -15px;
+    border-radius: 20px;
+    z-index: 1;
+    /* overflow: auto; */
+}
+
+.bottom-container_categories{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;  
+    margin-top: 1%;   
+}
+
+.bottom-container_categories button{
+    height: 40px;
+    width: auto;
+    background-color: white;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Michroma', sans-serif;
+    border: none;
+
+}
+
+.bottom-container_categories button:hover{
+    cursor: pointer;
+    border-bottom: 3px solid black;
+}
+
+.bottom-container hr {
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.infos {
+    width: 95%;
+    height: 100%;
+    padding: 2%;
+    padding-top: 0;
+
+}
+
+.city{
+    height: 100%;
+}
+
+#London {
+    font-size: small;
+}
+
+#London p {
+    margin-bottom: 3.5%;
+    margin-top: 3.5%;
+    padding-left: 45px;
+}
+
+#nexo {
+    display: flex;
+    margin-bottom: 3.5%;
+    margin-top: 3.5%;
+}
+
+#nexo2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.5%;
+    margin-top: 3.5%;
+}
+
+.poke_Abilities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: capitalize;
+ 
+}
+
+.poke_stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 268px;
+    justify-content: space-evenly !;
+}
+
+.PokeTypes{
+    text-transform: capitalize;
+}
+
+.base-stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.poke_stats_type {
+    font-size: clamp(16px, 7.5vw, 17.8px);
+    margin-top: 1%;
+    display: flex;
+    width: 2%;
+    text-transform: capitalize;
+}
+
+.poke_stats_skillbar{
+    width: 80%;
+}
+
+.poke_MoveList {
+    overflow: auto;
+    height: 250px;
+    text-transform: capitalize;
+}
+
+.poke_move {
+    
+}
+
+.poke_move:hover {
+    background-color: #C19A6B;
+}
+
+    /* ---- Footer (normal) ---- */
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #d1bc8a;
+    /* background-color: #FBD603; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px
+}
+
+.footer button {
+    height: 100%;
+    width: 80%;
+    background-color:#E00000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer button:hover {
+    background-color: #FF0000;
+    cursor: pointer;
+}
+
+.footer button img {
+    object-fit: contain;
+    height: 120px;
+    width: auto;
+}
+
+.footer button h1 {
+    font-size: clamp(24px, 7.5vw, 34px); 
+    margin: 0;
+}
+
+
+    /* -----   PokeClasses& COLOURS    ----- */
+
+
+.grass {
+    background-color: #5fdf69;
+    /* background-color: rgb(76, 207, 32); */
+    /* background-color: rgb(68,214,44, 0.9); */
+}
+
+.normal {
+    background-color: #c6a664;
+}
+
+.fighting {
+    background-color: #b81416;
+}
+
+.flying {
+    background-color: rgb(123, 177, 210);
+}
+
+.poison {
+    background-color: #00ff00;
+    /* background-color: rgb(113, 202, 41); */
+}
+
+.ground {
+    background-color: rgb(117, 62, 2);
+}
+
+.rock {
+    background-color: rgb(72, 65, 65);
+}
+
+.bug {
+    background-color: #a1eca7;
+}
+
+.ghost {
+    background-color: rgb(136, 185, 193);
+}
+
+.steel {
+    background-color: rgb(71, 145, 230);
+}
+
+.fire {
+    background-color: #F19343;
+}
+
+.water {
+    background-color: #97b2e9;
+}
+
+.electric {
+    background-color: #ffff33;
+    /* background-color: rgb(235, 238, 55); */
+}
+
+.electric:hover {
+    text-shadow: 0 0 10px #000000 !important;
+}
+
+.psychic {
+    background-color: rgb(214, 236, 240);
+}
+
+.ice {
+    background-color: rgb(45, 186, 237);
+}
+
+.dragon {
+    background-color: rgb(226, 195, 71);
+}
+
+.dark {
+    background-color: rgb(31, 20, 20);
+}
+
+.fairy {
+    background-color: rgb(232, 52, 226);
+}
+
+
+    /* ---- PokeCard - Diagramm ---- */
+
+
+.hp {
+    background-color: rgb(84, 255, 5);
+    border-radius: 15px;
+}
+
+.attack {
+    background-color: rgb(244, 248, 9);
+    border-radius: 15px;
+}
+
+.defense {
+    background-color: rgb(73, 255, 212);
+
+    border-radius: 15px;
+}
+
+.special-attack {
+    background-color: rgb(255, 160, 59);
+    border-radius: 15px;
+}
+
+.special-defense {
+    background-color: rgb(10, 239, 235);
+    /* background-color: rgb(58, 183, 232); */
+    border-radius: 15px;
+}
+
+.speed {
+    background-color: rgb(226,191,101);
+    /* background-color: rgb(73, 255, 212); */
+    border-radius: 15px;
+}
+
+
+        /* ----- RESPONSIVE DESIGN ----- */
+
+
+@media (min-width: 500px) and (max-width: 720px) {
+
+    /* .header {
+        flex-direction: column;
+    }
+    
+    .header input {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    } */
+
+    /* ---- Footer (responsive) ---- */
+
+    .footer {
+        height: 350px;
+    }
+
+    .footer button {       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer button h1 {
+        font-size: clamp(24px, 7.5vw, 34px); 
+    }
+
+}
+
+@media (min-width: 351px) and (max-width: 499px) {
+    
+    /* .header {
+        flex-direction: column;
+    }
+    
+    .header img {
+        padding-right: 0px;
+    }
+    
+    .header_Logo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header_Logo h1 {
+        margin: 0;
+    }
+    
+    .header input {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    } */
+
+    /* ---- PopUp-Container Elements (responsive)---- */
+
+    .detail-card{
+        
+        min-height: 640px;
+        /* width: 450px; */
+        height: 65%;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .detail-card_head button {
+        height: 30px;
+        width: 45px;
+    }
+   
+    .top-containerInside button {
+        height: 45px;
+        width: 45px;
+    }
+
+    .top-containerInside img{
+        max-height: 70%;
+    }
+
+    .top-containerInside img:hover {
+        transform: scale(1.4);
+    }
+
+    .bottom-container{
+        margin-top: -15px;
+
+    }
+
+    .bottom-container_categories button{
+        /* height: 40px; */
+        width: auto;
+        font-size: small;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        padding: 0.5%;
+        z-index: 0;
+    }
+ 
+    .bottom-container_categories button:hover{
+        cursor: pointer;
+        border-bottom: 3px solid black;
+    }
+
+    .poke_stats_skillbar{
+        width: 70%;
+    }
+
+    /* ---- Footer (responsive) ---- */
+
+    .footer {
+        height: 350px;
+    }
+
+    .footer button {       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer button h1 {
+        font-size: clamp(24px, 7.5vw, 34px); 
+    }
+
+}
+
+@media (min-width: 270px) and (max-width: 350px) {      /*PopUp Container noch responsive machen für @media (min-width: 230px) and (max-width: 350px)*/
+
+    /* .header {
+        flex-direction: column;
+    }
+    
+    .header img {
+        padding-right: 0px;
+    }
+    
+    .header_Logo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header_Logo h1 {
+        margin: 0;
+    }
+    
+    .header input {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    } */
+
+
+    .pokecard_body {
+        max-width: 200px;
+        max-height: 220px;
+    }
+    
+    .pokecard_body img {
+        max-width: 200px;
+        max-height: 220px;
+    } 
+
+    /* ---- PopUp-Container Elements (responsive)---- */
+
+    .detail-card{
+        min-height: 65%;
+        width: 90%;
+    }
+    
+    .detail-card_head button {
+        height: 30px;
+        width: 45px;
+    }
+
+    .top-containerInside button{
+        height: 45px;
+        width: 45px;
+    }
+
+    .top-containerInside img{
+        max-height: 70%;
+    }
+
+    .top-containerInside img:hover {
+        transform: scale(1.4);
+    }
+
+    .bottom-container{
+        margin-top: -15px;
+    }
+
+    .bottom-container_categories {
+        margin-bottom: 5px;
+    }
+
+    .bottom-container_categories button{
+        /* height: 40px; */
+        width: auto;
+        font-size: small;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        padding: 0.5%;
+        z-index: 0;
+    }
+
+    .bottom-container_categories button:hover{
+        cursor: pointer;
+        border-bottom: none;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        border-top: 3px solid black;
+    }
+
+    .poke_stats_skillbar{
+        width: 65%;
+        padding-left: 1;
+    }
+
+    /* ---- Footer (responsive) ---- */
+
+    .footer {
+        height: 350px;
+    }
+
+    .footer button {       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer button h1 {
+        font-size: clamp(18px, 7.5vw, 34px); 
+    }
+
+}

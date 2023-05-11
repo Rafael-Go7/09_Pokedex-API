@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Übung04 - Pokedex</title>
+    <link rel="icon" type="image/x-icon" href="img/pokemon ball_6_bearbeitet.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Genos:wght@400;700;800&family=Michroma&display=swap" rel="stylesheet">
+    
+    
+    
+<script src="4_Pokedex_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="4_Pokedex_style.css">
+
+
+
+
+</head>
+
+<body onload="loadPokemons()">
+    <div class="header ">
+        
+        <a class="header_Logo" href="index.html">
+            <h1>Pokedex</h1>
+        </a>
+        <input id="searchbar" placeholder="search Pokemon..." type="text" onkeyup="searchPokemon()">
+
+    </div>
+
+    <div class="background" id="maincontent">
+
+
+        <div class="card" id="pokecard" onclick="openPokemon()">
+
+            <div class="pokecard_head">
+                <h2 id="poke_name"></h2>
+                <div>#1</div>
+            </div>
+            <div class="pokecard_body">
+                <div class="pokecard_class">
+                    
+                </div>
+               
+            </div>
+        </div>
+    
+        
+    </div>
+    
+    <div class="footer">
+        <button class="footer_btn" onclick="LoadMorePokemons('P')"><img src="img/pokemon ball_6_bearbeitet.png"><h1>Click here to LOAD - MORE POKEMONS!!!</h1></button>
+    </div>
+
+    <div id="popUpContainer" class="popUp-container hide">
+
+    </div>
+</body>
+
+</html>
