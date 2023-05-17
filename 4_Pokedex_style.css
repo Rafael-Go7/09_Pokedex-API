@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/DaFont.com/CC00/Pokemon Solid.ttf');
+}
+
 body{
     margin: 0;
     font-family: 'Electrolize', sans-serif;
@@ -5,6 +12,9 @@ body{
 
 body h1{
     font-family: 'Michroma', sans-serif;
+    /* font-family: 'Pokemon Solid';
+    color: #ffcd00;
+    -webkit-text-stroke: 5px #356abc; */
 }
 
 .html {
