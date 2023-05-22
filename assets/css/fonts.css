@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/assets/fonts/DaFont.com/CC00/Pokemon Solid.ttf');
+}
+
+/* electrolize-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Electrolize', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/electrolize-v14-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/electrolize-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/electrolize-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/assets/fonts/electrolize-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/electrolize-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/electrolize-v14-latin-regular.svg#Electrolize') format('svg'); /* Legacy iOS */
+  }
+
+/* michroma-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Michroma', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/michroma-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/michroma-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/michroma-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/assets/fonts/michroma-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/assets/fonts/michroma-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/michroma-v16-latin-regular.svg#Michroma') format('svg'); /* Legacy iOS */
+  }
+  

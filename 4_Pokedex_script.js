@@ -321,19 +321,21 @@ function LoadMorePokemons () {
 
 // let Keypress = document.getElementById('popUpContainer');
 
-window.addEventListener('keydown', (event) => {       // Definition des Events 'keypress'
-    if (event.key == 39) {
-        keyboard.KEY_RIGHT = true;
-        arrowRight(i);
-    }
+// window.addEventListener('keydown', )
 
-    if (event.key == 37) {
-        keyboard.KEY_LEFT = true;
-        arrowLeft(i);
-    }
-    console.log(event);                                     //Google suchbefehle: z.B.: "javascript get arrow key pressed", "eventlistener keypress detecting the pressed arrow key geeksforgeeks", "eventlistener press arrow down", "etc."
+// window.addEventListener('keydown', (event) => {       // Definition des Events 'keypress'
+//     if (event.key == 39) {
+//         keyboard.KEY_RIGHT = true;
+//         arrowRight(i);
+//     }
 
-});
+//     if (event.key == 37) {
+//         keyboard.KEY_LEFT = true;
+//         arrowLeft(i);
+//     }
+//     console.log(event);                                     //Google suchbefehle: z.B.: "javascript get arrow key pressed", "eventlistener keypress detecting the pressed arrow key geeksforgeeks", "eventlistener press arrow down", "etc."
+
+// });
 
 
 
