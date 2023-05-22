@@ -5,6 +5,17 @@
     src: url('./assets/fonts/DaFont.com/CC00/Pokemon Solid.ttf');
 }
 
+/* @font-face {
+    font-family: 'Michroma', sans-serif;
+    font-style: normal;
+    src: url('/assets/fonts/Michroma-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'electrolize-regular', sans-serif;
+    src: url('/assets/fonts/DaFont.com/CC00/Electrolize-Regular.ttf');
+} */
+
 body{
     margin: 0;
     font-family: 'Electrolize', sans-serif;

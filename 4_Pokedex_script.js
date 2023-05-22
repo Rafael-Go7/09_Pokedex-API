@@ -1,6 +1,7 @@
 let PokemonList = [];
 startPokemonCount = 0;
 LoadMorePokemonsCount = 20;
+// let keyboard = new Keyboard();
 
 
 async function loadPokemons() {                                 // async functions we use when we have high latencies, e.g. get apis from internet
@@ -308,9 +309,39 @@ function LoadMorePokemons () {
     loadPokemons();
 }
 
+
+// document.onkeydown = function (event) {
+//     switch (event.keyCode) {
+//         case 37:
+//             arrowLeft(i);
+//         case 39:
+//             arrowRight(i); 
+//     }
+// }
+
+// let Keypress = document.getElementById('popUpContainer');
+
+window.addEventListener('keydown', (event) => {       // Definition des Events 'keypress'
+    if (event.key == 39) {
+        keyboard.KEY_RIGHT = true;
+        arrowRight(i);
+    }
+
+    if (event.key == 37) {
+        keyboard.KEY_LEFT = true;
+        arrowLeft(i);
+    }
+    console.log(event);                                     //Google suchbefehle: z.B.: "javascript get arrow key pressed", "eventlistener keypress detecting the pressed arrow key geeksforgeeks", "eventlistener press arrow down", "etc."
+
+});
+
+
+
         // <p>HP: ${PokemonList[i]['stats']['0']['base_stat']}</p>
         // <p>Attack: ${PokemonList[i]['stats']['1']['base_stat']}</p>
         // <p>Defense: ${PokemonList[i]['stats']['2']['base_stat']}</p>
         // <p>Special Attack: ${PokemonList[i]['stats']['3']['base_stat']}</p>
         // <p>Special Defense: ${PokemonList[i]['stats']['4']['base_stat']}</p>
         // <p>Speed: ${PokemonList[i]['stats']['5']['base_stat']}</p>
+
+
