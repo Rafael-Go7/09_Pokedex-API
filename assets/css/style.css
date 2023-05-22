@@ -1,10 +1,10 @@
 body{
     margin: 0;
-    font-family: 'Electrolize', sans-serif;
+    font-family: 'Electrolize';
 }
 
 body h1{
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Michroma';
 }
 
 .html {
@@ -284,7 +284,7 @@ body h1{
     width: 94%;
     height: 88%;
     background-color: black;
-    background-image: url("img/Star\ Sky_612x612.jpg");
+    background-image: url("/img/Star\ Sky_612x612.jpg");
     border-radius: 15px;
     z-index: 2;  
     display: flex;
@@ -373,7 +373,7 @@ body h1{
     background-color: white;
     font-weight: bold;
     font-size: large;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Michroma';
     border: none;
 
 }
@@ -863,3 +863,6 @@ body h1{
     }
 
 }
+
+
+
