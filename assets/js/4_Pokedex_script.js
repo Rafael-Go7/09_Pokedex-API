@@ -2,6 +2,7 @@ let PokemonList = [];
 startPokemonCount = 0;
 LoadMorePokemonsCount = 20;
 // let keyboard = new Keyboard();
+CurrentGlobalPokemon = [];
 
 
 async function loadPokemons() {                                 // async functions we use when we have high latencies, e.g. get apis from internet
@@ -48,7 +49,7 @@ function renderPokemons(){
     document.getElementById('maincontent').innerHTML = '';
     for (let index = 0; index < PokemonList.length; index++) {
         const ShowPokemon = PokemonList[index];
-                                                                   
+
     templateRenderPokemons(ShowPokemon, index); 
     gettype(index);
     }       
@@ -276,6 +277,7 @@ function renderPokeMovelist (movename, j){
     `;
 }
 
+
 function arrowLeft(i) {
     if (i <= 0){
         i = PokemonList.length-1;
@@ -310,7 +312,7 @@ function LoadMorePokemons () {
 }
 
 
-// document.onkeydown = function (event) {
+// PokemonList[i].onkeydown = function (event) {
 //     switch (event.keyCode) {
 //         case 37:
 //             arrowLeft(i);
@@ -323,19 +325,21 @@ function LoadMorePokemons () {
 
 // window.addEventListener('keydown', )
 
-// window.addEventListener('keydown', (event) => {       // Definition des Events 'keypress'
-//     if (event.key == 39) {
-//         keyboard.KEY_RIGHT = true;
-//         arrowRight(i);
-//     }
+// let KeyPressEvents= PokemonList[{$i}];
 
-//     if (event.key == 37) {
-//         keyboard.KEY_LEFT = true;
-//         arrowLeft(i);
-//     }
-//     console.log(event);                                     //Google suchbefehle: z.B.: "javascript get arrow key pressed", "eventlistener keypress detecting the pressed arrow key geeksforgeeks", "eventlistener press arrow down", "etc."
+document.addEventListener('keydown', (event)=> {       // Definition des Events 'keypress'
+    if (event.key == 39) {
+        keyboard.KEY_RIGHT = true;
+        arrowRight(CurrentGlobalPokemon);
+    }
 
-// });
+    if (event.key == 37) {
+        keyboard.KEY_LEFT = true;
+        arrowLeft(CurrentGlobalPokemon);
+    }
+    console.log(event);                                     //Google suchbefehle: z.B.: "javascript get arrow key pressed", "eventlistener keypress detecting the pressed arrow key geeksforgeeks", "eventlistener press arrow down", "etc."
+
+});
 
 
 
