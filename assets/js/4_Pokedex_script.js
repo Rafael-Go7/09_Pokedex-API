@@ -2,7 +2,7 @@ let PokemonList = [];
 startPokemonCount = 0;
 LoadMorePokemonsCount = 20;
 // let keyboard = new Keyboard();
-CurrentFullViewPokemon;
+let CurrentFullViewPokemon;
 
 
 async function loadPokemons() {                                 // async functions we use when we have high latencies, e.g. get apis from internet
@@ -315,31 +315,18 @@ function LoadMorePokemons () {
 }
 
 
-// PokemonList[i].onkeydown = function (event) {
-//     switch (event.keyCode) {
-//         case 37:
-//             arrowLeft(i);
-//         case 39:
-//             arrowRight(i); 
-//     }
-// }
-
-// let Keypress = document.getElementById('popUpContainer');
-
-// window.addEventListener('keydown', )
-
-// let KeyPressEvents= PokemonList[{$i}];
-
-document.addEventListener("keydown", (event) => {       // Definition des Events 'keypress'
-    if (event.key == 39) {
-        // keyboard.KEY_RIGHT = true;
+document.addEventListener('keydown', (event) => {       // Definition of the event 'keypress'
+    if (event.keyCode == 39) {
+        
         arrowRight(CurrentFullViewPokemon);
+        console.log('arrowRight executed');
     }
 
-    if (event.key == 37) {
-        // keyboard.KEY_LEFT = true;
+    if (event.keyCode == 37) {
+      
         arrowLeft(CurrentFullViewPokemon);
+        // console.log('arrowLeft executed');
     }
-    console.log(event);                                     //Google suchbefehle: z.B.: "javascript get arrow key pressed", "eventlistener keypress detecting the pressed arrow key geeksforgeeks", "eventlistener press arrow down", "etc."
+    console.log(event);                                     
 
 });
